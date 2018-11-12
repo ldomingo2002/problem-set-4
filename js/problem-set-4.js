@@ -51,9 +51,11 @@ function celsius() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-var fahrenheiht = ((cels * 1.8) + 32).toFixed(2);
+
+let fHeight = ((cels * 1.8) + 32).toFixed(2);
 var div = document.getElementById('output3');
-div.innerHTML = fahrenheiht;
+div.innerHTML =  cels + 'degrees celsius is equal to' + fHeight + "degrees fahrenheit.";
+
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
