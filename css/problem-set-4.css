@@ -51,3 +51,8 @@ button:hover {
 .fail {
   background-color: #EF9A9A;
 }
+
+#hello {
+  font-family: "Century Gothic", "Century Gothic", "Apple Gothic", sans-serif;
+  font-size: 1.1em
+}
