@@ -54,7 +54,7 @@ function celsius() {
 
 let fHeight = ((cels * 1.8) + 32).toFixed(2);
 var div = document.getElementById('output3');
-div.innerHTML =  cels + 'degrees celsius is equal to' + fHeight + "degrees fahrenheit.";
+div.innerHTML = `${cels} degrees Celsius equals ${fHeight} degrees Fahrenheit.`;
 
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -75,6 +75,10 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
+
+let cell = ((fahr - 32) * (5/9)).toFixed(2);
+var div = document.getElementById('output4');
+div.innerHTML = `${fahr} degrees Fahrenheit equals ${cell} degrees Celsius.`;
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -99,6 +103,12 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
+  let ft = Math.floor(inches / 12);
+  let yds = Math.floor(inches / 36);
+  let miles = Math.floor(inches / 63360);
+
+    var div = document.getElementById('output5');
+    div.innerHTML = `Miles: ${miles} <br/> Yards: ${yds} <br/> Feet: ${ft} <br/> Inches: ${inches}`;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
