@@ -106,6 +106,7 @@ function inches() {
   let ft = Math.floor(inches / 12);
   let yds = Math.floor(inches / 36);
   let miles = Math.floor(inches / 63360);
+  inches = input 
 
     var div = document.getElementById('output5');
     div.innerHTML = `Miles: ${miles} <br/> Yards: ${yds} <br/> Feet: ${ft} <br/> Inches: ${inches}`;
