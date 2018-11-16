@@ -201,6 +201,7 @@ let oz = ounces;
 
 var div = document.getElementById('output8')
 div.innerHTML = `Tons: ${tons}<br/>Pounds: ${pounds}<br/>Ounces: ${oz}`;
+
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -224,6 +225,8 @@ function money() {
   /////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 9 CODE HERE
+var div = document.getElementById('output 9');
+div.innerHTML = ``;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
