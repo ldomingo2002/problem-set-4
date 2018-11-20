@@ -77,8 +77,8 @@ function fahrenheit() {
   // WRITE YOUR EXERCISE 4 CODE HERE
 
 let cell = ((fahr - 32) * (5/9)).toFixed(2);
-var div = document.getElementById('output4');
-div.innerHTML = `${fahr} degrees Fahrenheit equals ${cell} degrees Celsius.`;
+var div=document.getElementById('output4');
+div.innerHTML= `${fahr} degrees Fahrenheit equals ${cell} degrees Celsius.`;
 
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -103,13 +103,14 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-  let ft = Math.floor(inches / 12);
-  let yds = Math.floor(inches / 36);
-  let miles = Math.floor(inches / 63360);
-  inches = input
 
-    var div = document.getElementById('output5');
-    div.innerHTML = `Miles: ${miles}<br/>Yards: ${yds}<br/>Feet: ${ft}<br/>Inches: ${inches}`;
+  let miles = Math.floor(inches / 63360);
+  let yds = Math.floor(inches / 36) % 1760;
+  let ft = Math.floor(inches / 12) % 3;
+  let inch = Math.floor(inches) % 12;
+
+  var div=document.getElementById('output5');
+  div.innerHTML = `Miles: ${miles}<br/>Yards: ${yds}<br/>Feet: ${ft}<br/>Inches: ${inch}`;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -134,9 +135,10 @@ function centimeters() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
+
 let kilo = Math.floor(centimeters / 100000);
-let meter = Math.floor(centimeters / 100);
-let centi = Math.floor(centimeters / 1);
+let meter = Math.floor(centimeters / 100) % 1000;
+let centi = Math.floor(centimeters / 1) % 100;
 
 var div = document.getElementById('output6');
 div.innerHTML = `Kilometers: ${kilo}<br/>Meters: ${meter}<br/>Centimeters: ${centi}`;
@@ -164,10 +166,10 @@ function fluidOunces() {
 
   // WRITE YOUR EXERCISE 7 CODE HERE
 let gallons = Math.floor(fluidOunces / 128);
-let quarts = Math.floor(fluidOunces / 32);
-let pints = Math.floor(fluidOunces / 16);
-let cups = Math.floor(fluidOunces / 8);
-let fOunces = fluidOunces;
+let quarts = Math.floor(fluidOunces / 32) % 4;
+let pints = Math.floor(fluidOunces / 16) % 2;
+let cups = Math.floor(fluidOunces / 8) % 2;
+let fOunces = (fluidOunces) % 8;
 
 var div = document.getElementById('output7');
 div.innerHTML = `Gallons: ${gallons}<br/>Quarts: ${quarts}<br/>Pints: ${pints}<br/>Cups: ${cups}<br/>Fluid Ounces: ${fOunces}`;
@@ -197,7 +199,7 @@ function ounces() {
 
 let tons = Math.floor(ounces / 32000);
 let pounds = Math.floor(ounces / 16);
-let oz = ounces;
+let oz = Math.floor(ounces) % 16;
 
 var div = document.getElementById('output8')
 div.innerHTML = `Tons: ${tons}<br/>Pounds: ${pounds}<br/>Ounces: ${oz}`;
