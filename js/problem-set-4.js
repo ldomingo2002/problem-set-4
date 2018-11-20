@@ -260,15 +260,11 @@ function change() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 10 CODE HERE
-let quarters = 0.25;
-let dimes = 0.10;
-let nickels = 0.05;
-let pennies = 0.01;
-
-if (amount < 1.00 && >= 0.25){
-
-
-}
+    let quarters = Math.floor(amount / 0.25);
+    let dimes = Math.floor(amount / 0.10);
+    let nickels = Math.floor(amount / 5);
+    let penn = (amount) % 5;
+    let amoount = quarters + dimes + nickels + penn;
 
 var div = document.getElementById('output10');
 div.innerHTML = `${amoount} coins`;
