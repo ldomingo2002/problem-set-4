@@ -227,8 +227,15 @@ function money() {
   /////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 9 CODE HERE
-var div = document.getElementById('output 9');
-div.innerHTML = ``;
+
+let dollars = Math.floor(pennies / 100);
+let quarters = Math.floor(pennies / 25) % 4;
+let dimes = Math.floor(pennies / 10) % 2.5;
+let nickels = Math.floor(pennies / 5) % 2;
+let penn = (pennies) % 5;
+
+var div = document.getElementById('output9');
+div.innerHTML = `Dollars: ${dollars}<br/>Quarters: ${quarters}<br/>Dimes: ${dimes}<br/> Nickels: ${nickels}<br/>Pennies: ${penn}`;
 
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
@@ -253,7 +260,18 @@ function change() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 10 CODE HERE
+let quarters = 0.25;
+let dimes = 0.10;
+let nickels = 0.05;
+let pennies = 0.01;
 
+if (amount < 1.00 && >= 0.25){
+
+
+}
+
+var div = document.getElementById('output10');
+div.innerHTML = `${amoount} coins`;
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
